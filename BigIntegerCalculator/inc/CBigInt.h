@@ -15,7 +15,13 @@ public:
 	//CBigInt operator-(const CBigInt& value) const;
     CBigInt operator-(const CBigInt& value);
 
-    int CBigInt::CompareNoSign(const CBigInt& value1, const CBigInt& value2);
+    void Mul(const CBigInt& value1, const CBigInt& value2, CBigInt& result);
+
+    void Div(const CBigInt& value1, const CBigInt& value2, CBigInt& result);
+
+    void Power(const CBigInt& value1, const CBigInt& value2, CBigInt& result);
+
+    int CompareNoSign(const CBigInt& value1, const CBigInt& value2);
 
 	//符号位，0表示正数，1表示负数
 	unsigned int m_Sign;

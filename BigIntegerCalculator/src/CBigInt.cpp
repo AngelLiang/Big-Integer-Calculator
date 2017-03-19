@@ -1,5 +1,11 @@
 #include "CBigInt.h"
 
+/*
+ * 函数：CompareNoSign
+ * 参数：const CBigInt& value1 - 比较数1
+ *       const CBigInt& value2 - 比较数2
+ * 返回：int
+ */
 int CBigInt::CompareNoSign(const CBigInt& value1, const CBigInt& value2)
 {
     int result = 0;
@@ -16,6 +22,13 @@ int CBigInt::CompareNoSign(const CBigInt& value1, const CBigInt& value2)
     return result;
 }
 
+/*
+ * 函数：Add
+ * 参数：const CBigInt& value1 - 被加数
+ *       const CBigInt& value2 - 加数
+ *       CBigInt& result - 结果
+ * 返回：void
+ */
 void CBigInt::Add(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
 {
 	result = value1;
@@ -37,6 +50,12 @@ void CBigInt::Add(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
 	result.m_nLength += carry;
 }
 
+/*
+ * 函数：operator+
+ * 参数：const CBigInt& value
+ * 返回：CBigInt
+ * 说明：重载加号
+ */
 CBigInt CBigInt::operator+(const CBigInt& value)
 {
 	CBigInt r;
@@ -56,6 +75,13 @@ CBigInt CBigInt::operator+(const CBigInt& value)
 	return r;
 }
 
+/*
+ * 函数：Sub
+ * 参数：const CBigInt& value1 - 被减数
+ *       const CBigInt& value2 - 减数
+ *       CBigInt& result - 结果
+ * 返回：void
+ */
 void CBigInt::Sub(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
 {
 	CBigInt r = value1;
@@ -79,6 +105,12 @@ void CBigInt::Sub(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
 	result = r;
 }
 
+/*
+ * 函数：operator-
+ * 参数：const CBigInt& value
+ * 返回：CBigInt
+ * 说明：重载减号
+ */
 CBigInt CBigInt::operator-(const CBigInt& value)
 {
 	CBigInt r;
@@ -98,4 +130,38 @@ CBigInt CBigInt::operator-(const CBigInt& value)
 	return r;
 }
 
-//void CBigInt::Mul(const)
+/*
+ * 函数：Mul
+ * 参数：const CBigInt& value1 - 乘数1
+ *       const CBigInt& value2 - 乘数2
+ *       CBigInt& result - 相乘结果
+ * 返回：void
+ */
+void CBigInt::Mul(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
+{
+
+}
+
+/*
+ * 函数：Div
+ * 参数：const CBigInt& value1 - 被除数
+ *       const CBigInt& value2 - 除数
+ *       CBigInt& result - 结果
+ * 返回：void
+ */
+void CBigInt::Div(const CBigInt& value1, const CBigInt& value2, CBigInt& result)
+{
+
+}
+
+/*
+ * 函数：Power
+ * 参数：const CBigInt& value - 底数
+ *       const CBigInt& n - 乘方
+ *       CBigInt& result - 结果
+ * 返回：void
+ */
+void CBigInt::Power(const CBigInt& value, const CBigInt& n, CBigInt& result)
+{
+
+}
